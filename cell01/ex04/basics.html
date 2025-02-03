@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EX04</title>
+    <title>Basics</title>
 
     <style>
+        body {
+            background-color: pink;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        img {
+            height: 20rem;
+            width: auto;
+        }
+
+        .footer {
+            text-align: right;
+            font-style: italic;
+            font-family: monospace;
+            padding: 10px 20px;
+        }
     </style>
 </head>
 
 <body>
+    <h1>Welcome to Online Shopping!</h1>
+
+    <div class="container">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWZ5TIn7NBppEK3dGGm4DkdscCVJf6Yjj5QA&s"
+                alt="Shop1">
+            <p><a href="https://www.amazon.com">Visit Amazon</a></p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR--hkPOPSjqrMtqH3XbVveY01Cv8p4FiCzhA&s"
+                alt="Shop2">
+            <p><a href="https://www.ebay.com">Visit eBay</a></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        © nkongsak 2025
+    </div>
 </body>
 
 </html>
