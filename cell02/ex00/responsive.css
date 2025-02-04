@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.box2 {
+    background-color: blue;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        width: 90%;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+    }
+}
