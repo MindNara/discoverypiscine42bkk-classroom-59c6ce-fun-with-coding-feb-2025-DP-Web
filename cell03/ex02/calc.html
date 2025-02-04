@@ -34,7 +34,7 @@
 
     <div class="calculator">
         <h2>Calculator</h2>
-        <input type="number" id="number" min="0" placeholder="Enter number">
+        <input type="number" id="number1" min="0" placeholder="Enter number">
         <select id="operator">
             <option value="+">+</option>
             <option value="-">-</option>
@@ -42,19 +42,19 @@
             <option value="/">/</option>
             <option value="%">%</option>
         </select>
-        <input type="number" id="numberResult" min="0" placeholder="Enter number">
+        <input type="number" id="number2" min="0" placeholder="Enter number">
         <br>
         <button onclick="calculate()">Try me!</button>
     </div>
 
     <script>
         function calculate() {
-            let number = document.getElementById("number").value;
+            let number1 = document.getElementById("number1").value;
             let operator = document.getElementById("operator").value;
-            let numberResult = document.getElementById("numberResult").value;
+            let number2 = document.getElementById("number2").value;
 
-            let num1 = parseInt(number, 10);
-            let num2 = parseInt(numberResult, 10);
+            let num1 = parseInt(number1, 10);
+            let num2 = parseInt(number2, 10);
 
             if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
                 alert("Error :(");
