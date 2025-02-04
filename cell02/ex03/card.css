@@ -55,3 +55,9 @@ table {
     color: white;
     text-decoration: none;
 }
+
+.contact-btn {
+    background-color: black;
+    color: white;
+    border: 0;
+}
