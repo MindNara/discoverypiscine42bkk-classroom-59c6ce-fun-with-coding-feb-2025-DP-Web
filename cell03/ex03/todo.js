@@ -1,42 +1,50 @@
-function getTodos() {
-    return JSON.parse(document.cookie.split('; ').find(row => row.startsWith('todos='))?.split('=')[1] || '[]');
+function getAllTodo() {
+    const cookie = document.cookie.split('; ');
+    const todos = cookie.find(item => item.startsWith('todos='));
+    const todosValue = todos ? todos.split('=')[1] : '[]';
+
+    return JSON.parse(todosValue);
 }
 
-function setTodos(todos) {
-    document.cookie = "todos=" + JSON.stringify(todos) + "; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+function setTodo(todos) {
+    document.cookie = "todos=" + JSON.stringify(todos) + "; path=/; max-age=86400";
 }
 
-function renderTodos() {
+function loadTodo() {
     const list = document.getElementById("ft_list");
     list.innerHTML = "";
-    getTodos().reverse().forEach(todo => createTodoElement(todo, false));
+    getAllTodo().reverse().forEach(
+        todo => createTodo(todo, false)
+    );
 }
 
-function createTodoElement(text, save = true) {
+function createTodo(text, save = true) {
     const todo = document.createElement("div");
+
     todo.className = "todo";
     todo.innerText = text;
+
     todo.onclick = function () {
-        if (confirm("Do you want to remove this task?")) {
+        if (confirm("Do you want to remove task: " + text)) {
             todo.remove();
-            const todos = getTodos().filter(t => t !== text);
-            setTodos(todos);
+            const todos = getAllTodo().filter(t => t !== text);
+            setTodo(todos);
         }
     };
     document.getElementById("ft_list").prepend(todo);
 
     if (save) {
-        const todos = getTodos();
+        const todos = getAllTodo();
         todos.unshift(text);
-        setTodos(todos);
+        setTodo(todos);
     }
 }
 
 function addTodo() {
     const text = prompt("Enter a new TO DO:");
-    if (text && text.trim()) {
-        createTodoElement(text.trim());
+    if (text) {
+        createTodo(text);
     }
 }
 
-window.onload = renderTodos;
+window.onload = loadTodo;
