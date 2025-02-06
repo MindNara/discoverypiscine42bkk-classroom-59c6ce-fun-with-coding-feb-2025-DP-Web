@@ -16,10 +16,12 @@
     <script>
         $(document).ready(function () {
             $("#changeBg").click(function () {
-                let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-                $("body").css("background-color", randomColor);
+                let hue = Math.floor(Math.random() * 360);
+                let color = `hsl(${hue}, 100%, 50%)`;
+                $("body").css("background-color", color);
             });
         });
+
     </script>
 </body>
 
