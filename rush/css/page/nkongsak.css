@@ -1,0 +1,45 @@
+#about {
+    background-color: #d3cabf;
+}
+
+.box-profile {
+    font-family: "Playfair Display", serif;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.box-profile .text h1 {
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.box-profile .text p {
+    font-family: "Prompt", serif;
+    width: 90%;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.box-profile .text .userlogin {
+    background-color: #222222;
+    width: 90px;
+    padding: 6px 10px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.box-profile>img {
+    width: 35%;
+    height: auto;
+    border-radius: 20px;
+    border: 10px solid black;
+}
