@@ -44,12 +44,14 @@
         </select>
         <input type="number" id="number2" min="0" placeholder="Enter number">
         <br>
-        <button onclick="calc()">Try me!</button>
+        <button id="calcBtn">Try me!</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
+            $("#calcBtn").on("click", calc);
+
             function calc() {
                 let number1 = $("#number1").val();
                 let operator = $("#operator").val();
@@ -85,8 +87,6 @@
                 alert("Result: " + result);
                 console.log("Result:", result);
             }
-
-            $("#calculateBtn").on("click", calc);
 
             setInterval(() => {
                 alert("Please, use me...");
