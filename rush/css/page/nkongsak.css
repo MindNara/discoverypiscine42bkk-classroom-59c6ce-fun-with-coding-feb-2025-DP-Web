@@ -7,6 +7,7 @@ body {
     background-color: #222222;
     color: white;
     height: 100vh;
+    padding: 0 5rem;
 }
 
 .box-profile {
@@ -123,6 +124,7 @@ body {
 
 /* Section Exp */
 #exp {
+    padding: 0 5rem;
     height: 150px;
 }
 
@@ -146,6 +148,7 @@ body {
 
 /* Section About */
 #about {
+    padding: 0 5rem;
     height: 80vh;
 }
 
@@ -201,6 +204,7 @@ body {
 
 /* Section Project */
 #project {
+    padding: 0 5rem;
     height: 100vh;
     margin-bottom: 50px;
 }
