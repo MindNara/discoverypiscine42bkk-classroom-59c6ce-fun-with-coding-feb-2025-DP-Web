@@ -64,7 +64,7 @@ body {
 }
 
 .half:hover img {
-    filter: brightness(0.9);
+    filter: brightness(0.8);
 }
 
 .half a {
@@ -93,7 +93,7 @@ body {
 }
 
 .title {
-    font-family: "Cinzel", serif;
+    font-family: "Playfair Display", serif;
     position: absolute;
     top: 50%;
     left: 50%;
