@@ -41,7 +41,7 @@ h1 {
 
 .profile-describe {
     display: flex;
-    align-items: center;  
+    align-items: center;
     gap: 20px;
     text-align: left;
 }
@@ -160,6 +160,9 @@ ul li {
 }
 
 @media (max-width: 480px) {
+    .profile-item>img {
+        margin-top: 50px;
+    }
     .showcase-container {
         grid-template-columns: 1fr; 
     }
